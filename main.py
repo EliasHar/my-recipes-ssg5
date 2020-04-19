@@ -29,10 +29,10 @@ posts_metadata = [POSTS[post].metadata for post in POSTS]
 tags = [post['tags'] for post in posts_metadata]
 bread_html = bread_template.render(posts=posts_metadata, tags=tags)
 
-with open('../my-recipes4/index.html', 'w', encoding='utf-8') as file:
+with open('../my-recipes5/index.html', 'w', encoding='utf-8') as file:
     file.write(index_html)
 
-with open('../my-recipes4/bread.html', 'w') as file:
+with open('../my-recipes5/bread.html', 'w') as file:
     file.write(bread_html)
 
 for post in POSTS:
@@ -46,7 +46,7 @@ for post in POSTS:
     }
 
     post_html = post_template.render(post=post_data)
-    post_file_path = '../my-recipes4/posts/{slug}.html'.format(slug=post_metadata['slug'])
+    post_file_path = '../my-recipes5/posts/{slug}.html'.format(slug=post_metadata['slug'])
 
     os.makedirs(os.path.dirname(post_file_path), exist_ok=True)
     with open(post_file_path, 'w') as file:

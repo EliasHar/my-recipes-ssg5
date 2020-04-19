@@ -43,6 +43,19 @@ img {
     margin: 0 0 .5em 0;
     padding: 0;
 }
+#cookie{
+    position: relative;
+    animation:cookie 5s infinite;
+    animation-timing-function: linear;
+}
+@keyframes cookie {
+    from{
+        transform:rotate(0deg)
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
 @media screen and (min-width: 37.5em) {
 .topmenu {
     display: -webkit-box;
@@ -57,4 +70,4 @@ img {
     justify-content: flex-end;
 }
 }
-@import 'layout', 'icomoon','socialButts'; 
+@import 'layout', 'icomoon','socialButts','advert'; 
